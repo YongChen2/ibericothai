@@ -14,7 +14,7 @@ export default function Home() {
       name: "Sagrada Familia",
       subtitle: "Near Sagrada Familia",
       address: "C/ de Padilla, 288, Barcelona",
-      phone: "+34 688 583 766",
+      phone: "+34 931 06 81 44",
       hours: "Daily · 10:00 – 20:00",
       map: "https://maps.google.com/?q=Carrer+de+Padilla+288+Barcelona",
     },
@@ -25,897 +25,408 @@ export default function Home() {
       title: "Pad Thai",
       desc: "Classic stir-fried rice noodles with a fresh, vibrant flavor.",
       price: "€11.90",
-      image: "/PadThai.png",
     },
     {
-      title: "Red Curry",
-      desc: "Creamy Thai red curry with aromatic herbs and rich flavor.",
-      price: "€12.50",
-      image: "/RedCurry.png",
+      title: "Thai Curry",
+      desc: "Creamy curry with vegetables, aromatic spices, and rich coconut flavor.",
+      price: "€12.90",
     },
     {
       title: "Fried Rice",
-      desc: "Wok-fried rice with vegetables, egg, and your choice of protein.",
+      desc: "Wok-fried rice with vegetables, egg, and Thai seasonings.",
       price: "€10.90",
-      image: "/FriedRice.png",
     },
     {
       title: "Tom Yum",
-      desc: "Hot and sour Thai soup with bold citrus and herbal notes.",
-      price: "€8.90",
-      image: "/omyum.png",
+      desc: "Hot and sour Thai soup with herbs, seafood, and citrus notes.",
+      price: "€13.50",
     },
     {
       title: "Mango Sticky Rice",
-      desc: "Sweet mango served with soft sticky rice and coconut.",
+      desc: "Sweet mango with coconut sticky rice and sesame topping.",
       price: "€6.90",
-      image: "/stickyricemango.PNG",
-    },
-    {
-      title: "Thai Iced Tea",
-      desc: "Refreshing creamy tea with a smooth sweet finish.",
-      price: "€4.50",
-      image: "/ThaiIcedTea.PNG",
     },
   ];
 
- const galleryImages = [
-  "/obrazek.png",
-  "/obrazek1.png",
-  "/obrazek2.png",
-  "/obrazek3.png",
-  "/obrazek4.png",
-  "/obrazek5.png",
-];
-
-  const pdfCards = [
-    {
-      title: "Full Food Menu",
-      desc: "Open the complete food menu in PDF format.",
-      button: "Open Food PDF",
-      link: "/food-menu.pdf",
-      image: "/foodnahled.png",
-    },
-    {
-      title: "Drinks Menu",
-      desc: "Open the full drinks menu in PDF format.",
-      button: "Open Drinks PDF",
-      link: "/drinkmenu.pdf",
-      image: "/drinknahled.png",
-    },
+  const galleryImages = [
+    "/obrazek.png",
+    "/obrazek1.png",
+    "/obrazek2.png",
+    "/obrazek3.png",
+    "/obrazek4.png",
+    "/obrazek5.png",
   ];
 
   return (
-    <main className="page">
-      <header className="header">
-        <div className="brandWrap">
-          <img
-            src="/Iberico thai logo.PNG"
-            alt="Iberico Thai Logo"
-            className="headerLogo"
-          />
-          <div className="logo">IBERICO THAI</div>
-        </div>
+    <main style={styles.page}>
+      <header style={styles.header}>
+        <div style={styles.logo}>IBERICO THAI</div>
 
-        <nav className="nav">
-          <a href="#home">Home</a>
-          <a href="#locations">Locations</a>
-          <a href="#menu">Menu</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#contact">Contact</a>
+        <nav style={styles.nav}>
+          <a href="#home" style={styles.navLink}>Home</a>
+          <a href="#locations" style={styles.navLink}>Locations</a>
+          <a href="#menu" style={styles.navLink}>Menu</a>
+          <a href="#gallery" style={styles.navLink}>Gallery</a>
+          <a href="#contact" style={styles.navLink}>Contact</a>
         </nav>
       </header>
 
-      <section id="home" className="hero container">
-        <div className="heroText">
-          <div className="badge">Thai & Spanish Fusion • Barcelona</div>
-
-          <h1>
-            Fresh food.
-            <br />
-            Simple style.
-            <br />
-            Two locations.
-          </h1>
-
-          <p>
-            Discover Iberico Thai in Barcelona with one shared menu, two
-            convenient locations, and a modern casual dining experience inspired
-            by Thai flavors and a vibrant city atmosphere.
+      <section id="home" style={styles.hero}>
+        <div style={styles.heroInner}>
+          <p style={styles.eyebrow}>THAI & SPANISH FUSION</p>
+          <h1 style={styles.heroTitle}>Bold flavors, modern atmosphere.</h1>
+          <p style={styles.heroText}>
+            Discover a fresh dining experience in Barcelona with Thai-inspired cuisine,
+            elegant presentation, and warm, stylish spaces.
           </p>
 
-          <div className="heroButtons">
-            <a href="#menu" className="primaryBtn">
-              View Menu
-            </a>
-            <a href="#locations" className="secondaryBtn">
-              Choose Location
-            </a>
+          <div style={styles.heroButtons}>
+            <a href="#menu" style={styles.primaryButton}>View Menu</a>
+            <a href="#locations" style={styles.secondaryButton}>Find a Location</a>
           </div>
-        </div>
-
-        <div className="heroCard">
-          <img
-            src="/uvodfotka.png"
-            alt="Iberico Thai featured dish"
-            className="heroImage"
-          />
         </div>
       </section>
 
-      <section id="locations" className="section container">
-        <div className="sectionIntro">
-          <span className="sectionLabel">Our Locations</span>
-          <h2>Two places, one menu, same taste</h2>
-          <p>
-            Visit the branch that suits you best. Both locations offer the same
-            menu, fast service, and the Iberico Thai experience.
+      <section id="locations" style={styles.section}>
+        <div style={styles.sectionIntro}>
+          <p style={styles.eyebrow}>LOCATIONS</p>
+          <h2 style={styles.sectionTitle}>Visit our restaurants</h2>
+          <p style={styles.sectionText}>
+            Two Barcelona locations with the same menu and a welcoming atmosphere.
           </p>
         </div>
 
-        <div className="locationGrid">
-          {locations.map((loc, index) => (
-            <div className="locationCard" key={index}>
-              <div className="locationTop">
-                <div>
-                  <h3>{loc.name}</h3>
-                  <p>{loc.subtitle}</p>
-                </div>
-                <div className="locationDot"></div>
-              </div>
-
-              <div className="locationInfo">
-                <p>
-                  <strong>Address:</strong> {loc.address}
-                </p>
-                <p>
-                  <strong>Phone:</strong> {loc.phone}
-                </p>
-                <p>
-                  <strong>Hours:</strong> {loc.hours}
-                </p>
-              </div>
-
-              <div className="locationButtons">
-                <a
-                  href={`tel:${loc.phone.replace(/\s/g, "")}`}
-                  className="primarySmallBtn"
-                >
-                  Call
-                </a>
-                <a
-                  href={loc.map}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="secondarySmallBtn"
-                >
-                  Route
-                </a>
-              </div>
+        <div style={styles.locationGrid}>
+          {locations.map((location, index) => (
+            <div key={index} style={styles.locationCard}>
+              <h3 style={styles.cardTitle}>{location.name}</h3>
+              <p style={styles.cardSubtitle}>{location.subtitle}</p>
+              <p style={styles.cardText}>{location.address}</p>
+              <p style={styles.cardText}>{location.phone}</p>
+              <p style={styles.cardText}>{location.hours}</p>
+              <a href={location.map} target="_blank" rel="noreferrer" style={styles.cardLink}>
+                Open Map
+              </a>
             </div>
           ))}
         </div>
       </section>
 
-      <section id="menu" className="sectionAlt">
-        <div className="container">
-          <div className="sectionIntro center">
-            <span className="sectionLabel">Menu Preview</span>
-            <h2>Popular dishes everyone loves</h2>
-            <p>
-              A simple preview of your shared menu. You can also open the full
-              food and drinks menu as PDF below.
-            </p>
-          </div>
+      <section id="menu" style={styles.menuSection}>
+        <div style={styles.sectionIntro}>
+          <p style={styles.eyebrow}>MENU</p>
+          <h2 style={styles.sectionTitle}>A taste of our favorites</h2>
+          <p style={styles.sectionText}>
+            A preview of popular dishes served in our restaurants.
+          </p>
+        </div>
 
-          <div className="menuGrid">
-            {dishes.map((dish, index) => (
-              <div className="menuCard" key={index}>
-                <img
-                  src={dish.image}
-                  alt={dish.title}
-                  className="menuImage"
-                />
-
-                <div className="menuContent">
-                  <div className="menuTop">
-                    <h3>{dish.title}</h3>
-                    <span>{dish.price}</span>
-                  </div>
-                  <p>{dish.desc}</p>
-                </div>
+        <div style={styles.menuGrid}>
+          {dishes.map((dish, index) => (
+            <div key={index} style={styles.menuCard}>
+              <div style={styles.menuTop}>
+                <h3 style={styles.cardTitle}>{dish.title}</h3>
+                <span style={styles.price}>{dish.price}</span>
               </div>
-            ))}
-
-            {pdfCards.map((item, index) => (
-              <a
-                key={`pdf-${index}`}
-                href={item.link}
-                target="_blank"
-                rel="noreferrer"
-                className="menuCard pdfCard"
-              >
-                <div className="pdfImageWrap">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="pdfPreviewImage"
-                  />
-                  <div className="pdfOverlayBadge">PDF MENU</div>
-                </div>
-
-                <div className="pdfContent">
-                  <h3>{item.title}</h3>
-                  <p>{item.desc}</p>
-                  <div className="pdfButton">{item.button}</div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section container">
-        <div className="featureBox">
-          <div>
-            <span className="sectionLabel">Why Choose Us</span>
-            <h2>Fresh, fast, and easy to enjoy</h2>
-          </div>
-
-          <div className="featureRight">
-            <div className="featureItem">
-              <h4>Fresh ingredients</h4>
-              <p>
-                Balanced flavors, colorful presentation, and simple food people
-                want to come back for.
-              </p>
+              <p style={styles.cardText}>{dish.desc}</p>
             </div>
+          ))}
+        </div>
+      </section>
 
-            <div className="featureItem">
-              <h4>Two convenient spots</h4>
-              <p>
-                Great for tourists, locals, and anyone exploring Barcelona.
-              </p>
+      <section id="gallery" style={styles.gallerySection}>
+        <div style={styles.sectionIntro}>
+          <p style={styles.eyebrow}>GALLERY</p>
+          <h2 style={styles.sectionTitle}>Food and atmosphere</h2>
+          <p style={styles.sectionText}>
+            A simple gallery preview with your real dish images.
+          </p>
+        </div>
+
+        <div style={styles.galleryGrid}>
+          {galleryImages.map((img, i) => (
+            <div key={i} style={styles.galleryCard}>
+              <img
+                src={img}
+                alt={`Gallery ${i + 1}`}
+                style={styles.galleryImage}
+              />
             </div>
-
-            <div className="featureItem">
-              <h4>Shared menu</h4>
-              <p>
-                No confusion. Same dishes, same quality, whichever location you
-                choose.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
-      <section id="gallery" className="sectionAlt">
-        <div className="container">
-          <div className="sectionIntro center">
-            <span className="sectionLabel">Gallery</span>
-            <h2>Food and atmosphere</h2>
-            <p>A simple gallery preview with your real dish images.</p>
-          </div>
-
-          <div className="galleryGrid">
-            {gallery.map((item, index) => (
-              <div className="galleryItem" key={index}>
-                <img
-                  src={item}
-                  alt={`Gallery ${index + 1}`}
-                  className="galleryImage"
-                />
-              </div>
-            ))}
-          </div>
+      <section id="contact" style={styles.section}>
+        <div style={styles.contactBox}>
+          <p style={styles.eyebrow}>CONTACT</p>
+          <h2 style={styles.sectionTitle}>Come by or get in touch</h2>
+          <p style={styles.sectionText}>
+            Visit either of our Barcelona locations and enjoy our Thai fusion dishes.
+          </p>
+          <p style={styles.contactText}>Entença: +34 931 39 55 72</p>
+          <p style={styles.contactText}>Sagrada Familia: +34 931 06 81 44</p>
         </div>
       </section>
 
-      <section id="contact" className="section container">
-        <div className="contactBox">
-          <div>
-            <span className="sectionLabel">Contact</span>
-            <h2>Come visit Iberico Thai</h2>
-            <p>
-              Two locations in Barcelona, one simple experience. Check the menu,
-              choose your nearest branch, and enjoy the food.
-            </p>
-          </div>
-
-          <div className="contactRight">
-            {locations.map((loc, index) => (
-              <div className="contactCard" key={index}>
-                <h3>{loc.name}</h3>
-                <p>{loc.address}</p>
-                <p>{loc.phone}</p>
-                <p>{loc.hours}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <footer className="footer">
-        <p>© 2026 Iberico Thai. All rights reserved.</p>
+      <footer style={styles.footer}>
+        © 2026 Iberico Thai. All rights reserved.
       </footer>
-
-      <style jsx>{`
-        .page {
-          background: #f8f6f2;
-          color: #1f1f1f;
-          min-height: 100vh;
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-            Helvetica, Arial, sans-serif;
-        }
-
-        .container {
-          max-width: 1280px;
-          margin: 0 auto;
-          padding-left: 40px;
-          padding-right: 40px;
-        }
-
-        .header {
-          position: sticky;
-          top: 0;
-          z-index: 100;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 20px 40px;
-          background: rgba(248, 246, 242, 0.92);
-          backdrop-filter: blur(12px);
-          border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-        }
-
-        .brandWrap {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-        }
-
-        .headerLogo {
-          width: 46px;
-          height: 46px;
-          object-fit: contain;
-          border-radius: 12px;
-          background: white;
-          padding: 4px;
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        .logo {
-          font-size: 18px;
-          font-weight: 700;
-          letter-spacing: 0.12em;
-        }
-
-        .nav {
-          display: flex;
-          gap: 24px;
-          flex-wrap: wrap;
-        }
-
-        .nav a {
-          text-decoration: none;
-          color: #222;
-          font-size: 15px;
-          font-weight: 500;
-        }
-
-        .hero {
-          display: grid;
-          grid-template-columns: 1.1fr 0.9fr;
-          gap: 40px;
-          align-items: center;
-          padding-top: 80px;
-          padding-bottom: 60px;
-        }
-
-        .heroText {
-          max-width: 650px;
-        }
-
-        .badge {
-          display: inline-block;
-          background: #efe4d4;
-          color: #9a5e24;
-          padding: 10px 16px;
-          border-radius: 999px;
-          font-size: 14px;
-          font-weight: 600;
-          margin-bottom: 20px;
-        }
-
-        .hero h1 {
-          font-size: 64px;
-          line-height: 1.02;
-          margin: 0 0 24px;
-          font-weight: 700;
-          letter-spacing: -0.04em;
-        }
-
-        .hero p {
-          font-size: 18px;
-          line-height: 1.7;
-          color: #5d5d5d;
-          margin-bottom: 28px;
-          max-width: 580px;
-        }
-
-        .heroButtons {
-          display: flex;
-          gap: 14px;
-          flex-wrap: wrap;
-        }
-
-        .primaryBtn,
-        .primarySmallBtn {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          text-decoration: none;
-          background: #d98d3f;
-          color: white;
-          border-radius: 999px;
-          font-weight: 600;
-          transition: 0.2s ease;
-        }
-
-        .primaryBtn {
-          padding: 14px 24px;
-          box-shadow: 0 10px 30px rgba(217, 141, 63, 0.25);
-        }
-
-        .primarySmallBtn {
-          padding: 12px 18px;
-          font-size: 14px;
-        }
-
-        .secondaryBtn,
-        .secondarySmallBtn {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          text-decoration: none;
-          border-radius: 999px;
-          font-weight: 600;
-          transition: 0.2s ease;
-        }
-
-        .secondaryBtn {
-          background: white;
-          color: #222;
-          padding: 14px 24px;
-          border: 1px solid rgba(0, 0, 0, 0.08);
-        }
-
-        .secondarySmallBtn {
-          background: #f6f1ea;
-          color: #222;
-          padding: 12px 18px;
-          font-size: 14px;
-          border: 1px solid rgba(0, 0, 0, 0.06);
-        }
-
-        .primaryBtn:hover,
-        .primarySmallBtn:hover,
-        .secondaryBtn:hover,
-        .secondarySmallBtn:hover {
-          transform: translateY(-1px);
-        }
-
-        .heroCard {
-          background: white;
-          border-radius: 28px;
-          padding: 18px;
-          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-        }
-
-        .heroImage {
-          width: 100%;
-          min-height: 520px;
-          height: 520px;
-          object-fit: cover;
-          border-radius: 22px;
-          display: block;
-        }
-
-        .section {
-          padding-top: 40px;
-          padding-bottom: 80px;
-        }
-
-        .sectionAlt {
-          background: #f2eee8;
-          padding: 80px 0;
-        }
-
-        .sectionIntro {
-          max-width: 760px;
-          margin-bottom: 34px;
-        }
-
-        .sectionIntro.center {
-          text-align: center;
-          margin-left: auto;
-          margin-right: auto;
-        }
-
-        .sectionLabel {
-          display: inline-block;
-          font-size: 14px;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 0.12em;
-          color: #b27030;
-          margin-bottom: 14px;
-        }
-
-        .sectionIntro h2,
-        .featureBox h2,
-        .contactBox h2 {
-          font-size: 42px;
-          line-height: 1.08;
-          margin: 0 0 16px;
-          font-weight: 700;
-          letter-spacing: -0.03em;
-        }
-
-        .sectionIntro p,
-        .featureBox p,
-        .contactBox p {
-          font-size: 17px;
-          line-height: 1.7;
-          color: #5f5f5f;
-          margin: 0;
-        }
-
-        .locationGrid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-          gap: 24px;
-        }
-
-        .locationCard {
-          background: white;
-          border-radius: 24px;
-          padding: 28px;
-          box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
-          border: 1px solid rgba(0, 0, 0, 0.04);
-        }
-
-        .locationTop {
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-          margin-bottom: 20px;
-        }
-
-        .locationTop h3 {
-          font-size: 28px;
-          margin: 0 0 6px;
-          font-weight: 700;
-        }
-
-        .locationTop p {
-          font-size: 14px;
-          color: #8a8a8a;
-          margin: 0;
-        }
-
-        .locationDot {
-          width: 14px;
-          height: 14px;
-          border-radius: 50%;
-          background: #d98d3f;
-          margin-top: 8px;
-        }
-
-        .locationInfo {
-          display: grid;
-          gap: 10px;
-          margin-bottom: 24px;
-        }
-
-        .locationInfo p {
-          margin: 0;
-          color: #4a4a4a;
-          line-height: 1.6;
-        }
-
-        .locationButtons {
-          display: flex;
-          gap: 12px;
-          flex-wrap: wrap;
-        }
-
-        .menuGrid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-          gap: 24px;
-        }
-
-        .menuCard {
-          background: white;
-          border-radius: 24px;
-          overflow: hidden;
-          box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
-        }
-
-        .menuImage {
-          width: 100%;
-          height: 220px;
-          object-fit: cover;
-          display: block;
-        }
-
-        .menuContent {
-          padding: 22px;
-        }
-
-        .menuTop {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          gap: 16px;
-          margin-bottom: 12px;
-        }
-
-        .menuTop h3 {
-          margin: 0;
-          font-size: 22px;
-          font-weight: 700;
-        }
-
-        .menuTop span {
-          font-size: 15px;
-          font-weight: 700;
-          color: #b27030;
-          background: #f8efe5;
-          padding: 8px 12px;
-          border-radius: 999px;
-          white-space: nowrap;
-        }
-
-        .menuContent p {
-          margin: 0;
-          color: #5f5f5f;
-          line-height: 1.7;
-        }
-
-        .pdfCard {
-          text-decoration: none;
-          color: inherit;
-          background: linear-gradient(135deg, #fff8ef 0%, #f7eadb 100%);
-          border: 1px solid rgba(178, 112, 48, 0.14);
-          display: flex;
-          flex-direction: column;
-          min-height: 420px;
-          transition: 0.25s ease;
-        }
-
-        .pdfCard:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 22px 50px rgba(178, 112, 48, 0.14);
-        }
-
-        .pdfImageWrap {
-          position: relative;
-          width: 100%;
-          height: 220px;
-          background: #f3eadf;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          overflow: hidden;
-        }
-
-        .pdfPreviewImage {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          display: block;
-        }
-
-        .pdfOverlayBadge {
-          position: absolute;
-          top: 16px;
-          left: 16px;
-          display: inline-block;
-          background: #b27030;
-          color: white;
-          font-size: 12px;
-          font-weight: 700;
-          letter-spacing: 0.08em;
-          padding: 8px 12px;
-          border-radius: 999px;
-          z-index: 2;
-        }
-
-        .pdfContent {
-          padding: 22px;
-          display: flex;
-          flex-direction: column;
-          flex: 1;
-        }
-
-        .pdfContent h3 {
-          margin: 0 0 12px;
-          font-size: 24px;
-        }
-
-        .pdfContent p {
-          margin: 0 0 24px;
-          line-height: 1.7;
-          color: #5f5f5f;
-        }
-
-        .pdfButton {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          background: #1f1f1f;
-          color: white;
-          padding: 12px 18px;
-          border-radius: 999px;
-          font-size: 14px;
-          font-weight: 600;
-          width: fit-content;
-          margin-top: auto;
-        }
-
-        .featureBox {
-          background: white;
-          border-radius: 28px;
-          padding: 38px;
-          display: grid;
-          grid-template-columns: 0.9fr 1.1fr;
-          gap: 32px;
-          box-shadow: 0 18px 50px rgba(0, 0, 0, 0.06);
-        }
-
-        .featureRight {
-          display: grid;
-          gap: 18px;
-        }
-
-        .featureItem {
-          padding: 18px 0;
-          border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-        }
-
-        .featureItem h4 {
-          margin: 0 0 8px;
-          font-size: 20px;
-          font-weight: 700;
-        }
-
-        .galleryGrid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-          gap: 18px;
-        }
-
-        .galleryItem {
-          background: white;
-          border-radius: 22px;
-          overflow: hidden;
-          box-shadow: 0 14px 40px rgba(0, 0, 0, 0.05);
-        }
-
-        .galleryImage {
-          width: 100%;
-          height: 250px;
-          object-fit: cover;
-          display: block;
-        }
-
-        .contactBox {
-          display: grid;
-          grid-template-columns: 0.9fr 1.1fr;
-          gap: 28px;
-          align-items: start;
-        }
-
-        .contactRight {
-          display: grid;
-          gap: 20px;
-        }
-
-        .contactCard {
-          background: white;
-          border-radius: 22px;
-          padding: 24px;
-          box-shadow: 0 14px 40px rgba(0, 0, 0, 0.05);
-        }
-
-        .contactCard h3 {
-          margin: 0 0 12px;
-          font-size: 24px;
-          font-weight: 700;
-        }
-
-        .contactCard p {
-          margin: 0 0 8px;
-          color: #595959;
-          line-height: 1.6;
-        }
-
-        .footer {
-          padding: 24px 40px 40px;
-          text-align: center;
-        }
-
-        .footer p {
-          margin: 0;
-          color: #777;
-          font-size: 14px;
-        }
-
-        @media (max-width: 980px) {
-          .hero,
-          .featureBox,
-          .contactBox {
-            grid-template-columns: 1fr;
-          }
-
-          .hero h1 {
-            font-size: 48px;
-          }
-
-          .heroImage {
-            min-height: 360px;
-            height: 360px;
-          }
-        }
-
-        @media (max-width: 640px) {
-          .container {
-            padding-left: 20px;
-            padding-right: 20px;
-          }
-
-          .header {
-            padding: 16px 20px;
-            gap: 16px;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-
-          .nav {
-            gap: 14px;
-          }
-
-          .hero {
-            padding-top: 48px;
-            padding-bottom: 40px;
-          }
-
-          .hero h1 {
-            font-size: 38px;
-          }
-
-          .sectionIntro h2,
-          .featureBox h2,
-          .contactBox h2 {
-            font-size: 32px;
-          }
-
-          .featureBox {
-            padding: 26px;
-          }
-
-          .headerLogo {
-            width: 40px;
-            height: 40px;
-          }
-
-          .pdfImageWrap {
-            height: 200px;
-          }
-        }
-      `}</style>
     </main>
   );
 }
+
+const styles: { [key: string]: React.CSSProperties } = {
+  page: {
+    margin: 0,
+    padding: 0,
+    backgroundColor: "#f5f1eb",
+    color: "#1c1c1f",
+    fontFamily:
+      'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+  },
+
+  header: {
+    position: "sticky",
+    top: 0,
+    zIndex: 1000,
+    backgroundColor: "rgba(245, 241, 235, 0.92)",
+    backdropFilter: "blur(10px)",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: "20px 40px",
+    borderBottom: "1px solid rgba(0,0,0,0.06)",
+  },
+
+  logo: {
+    fontSize: "20px",
+    fontWeight: 700,
+    letterSpacing: "0.08em",
+  },
+
+  nav: {
+    display: "flex",
+    gap: "24px",
+    flexWrap: "wrap",
+  },
+
+  navLink: {
+    textDecoration: "none",
+    color: "#1c1c1f",
+    fontSize: "15px",
+    fontWeight: 500,
+  },
+
+  hero: {
+    padding: "110px 20px 90px",
+  },
+
+  heroInner: {
+    maxWidth: "900px",
+    margin: "0 auto",
+    textAlign: "center",
+  },
+
+  eyebrow: {
+    color: "#b87333",
+    fontWeight: 700,
+    letterSpacing: "0.18em",
+    fontSize: "14px",
+    marginBottom: "18px",
+  },
+
+  heroTitle: {
+    fontSize: "64px",
+    lineHeight: 1.05,
+    margin: "0 0 20px",
+    fontWeight: 800,
+  },
+
+  heroText: {
+    fontSize: "20px",
+    lineHeight: 1.7,
+    color: "#666",
+    maxWidth: "760px",
+    margin: "0 auto 34px",
+  },
+
+  heroButtons: {
+    display: "flex",
+    justifyContent: "center",
+    gap: "16px",
+    flexWrap: "wrap",
+  },
+
+  primaryButton: {
+    textDecoration: "none",
+    backgroundColor: "#1c1c1f",
+    color: "#fff",
+    padding: "14px 24px",
+    borderRadius: "999px",
+    fontWeight: 600,
+  },
+
+  secondaryButton: {
+    textDecoration: "none",
+    backgroundColor: "transparent",
+    color: "#1c1c1f",
+    padding: "14px 24px",
+    borderRadius: "999px",
+    border: "1px solid rgba(0,0,0,0.12)",
+    fontWeight: 600,
+  },
+
+  section: {
+    padding: "90px 20px",
+  },
+
+  menuSection: {
+    padding: "90px 20px",
+    backgroundColor: "#efe8df",
+  },
+
+  gallerySection: {
+    padding: "90px 20px",
+  },
+
+  sectionIntro: {
+    textAlign: "center",
+    maxWidth: "760px",
+    margin: "0 auto 46px",
+  },
+
+  sectionTitle: {
+    fontSize: "40px",
+    lineHeight: 1.15,
+    margin: "0 0 18px",
+    fontWeight: 800,
+  },
+
+  sectionText: {
+    fontSize: "18px",
+    lineHeight: 1.7,
+    color: "#666",
+    margin: 0,
+  },
+
+  locationGrid: {
+    maxWidth: "1280px",
+    margin: "0 auto",
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+    gap: "24px",
+  },
+
+  locationCard: {
+    backgroundColor: "#fff",
+    borderRadius: "24px",
+    padding: "28px",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.06)",
+  },
+
+  cardTitle: {
+    fontSize: "24px",
+    margin: "0 0 8px",
+    fontWeight: 700,
+  },
+
+  cardSubtitle: {
+    fontSize: "14px",
+    color: "#b87333",
+    fontWeight: 700,
+    margin: "0 0 16px",
+    letterSpacing: "0.08em",
+    textTransform: "uppercase",
+  },
+
+  cardText: {
+    fontSize: "16px",
+    lineHeight: 1.7,
+    color: "#555",
+    margin: "0 0 10px",
+  },
+
+  cardLink: {
+    display: "inline-block",
+    marginTop: "10px",
+    textDecoration: "none",
+    color: "#1c1c1f",
+    fontWeight: 700,
+  },
+
+  menuGrid: {
+    maxWidth: "1280px",
+    margin: "0 auto",
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+    gap: "24px",
+  },
+
+  menuCard: {
+    backgroundColor: "#fff",
+    borderRadius: "24px",
+    padding: "24px",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
+  },
+
+  menuTop: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    gap: "12px",
+    marginBottom: "12px",
+  },
+
+  price: {
+    fontSize: "16px",
+    fontWeight: 700,
+    color: "#b87333",
+    whiteSpace: "nowrap",
+  },
+
+  galleryGrid: {
+    maxWidth: "1400px",
+    margin: "0 auto",
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))",
+    gap: "22px",
+  },
+
+  galleryCard: {
+    backgroundColor: "#fff",
+    borderRadius: "26px",
+    overflow: "hidden",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
+  },
+
+  galleryImage: {
+    width: "100%",
+    height: "320px",
+    objectFit: "cover",
+    display: "block",
+  },
+
+  contactBox: {
+    maxWidth: "820px",
+    margin: "0 auto",
+    textAlign: "center",
+    backgroundColor: "#fff",
+    borderRadius: "28px",
+    padding: "40px 24px",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
+  },
+
+  contactText: {
+    fontSize: "18px",
+    lineHeight: 1.7,
+    color: "#444",
+    margin: "8px 0",
+  },
+
+  footer: {
+    textAlign: "center",
+    padding: "28px 20px 40px",
+    color: "#777",
+    fontSize: "14px",
+  },
+};

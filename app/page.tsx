@@ -14,7 +14,7 @@ export default function Home() {
       name: "Sagrada Familia",
       subtitle: "Near Sagrada Familia",
       address: "C/ de Padilla, 288, Barcelona",
-      phone: "+34 931 06 81 44",
+      phone: "+34 688 583 766",
       hours: "Daily · 10:00 – 20:00",
       map: "https://maps.google.com/?q=Carrer+de+Padilla+288+Barcelona",
     },

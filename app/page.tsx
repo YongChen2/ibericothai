@@ -86,6 +86,15 @@ export default function Home() {
     },
   ];
 
+  const handleCall = (phone) => {
+    const cleanedPhone = phone.replace(/\s/g, "");
+    const confirmed = window.confirm(`Do you want to call ${phone}?`);
+
+    if (confirmed) {
+      window.location.href = `tel:${cleanedPhone}`;
+    }
+  };
+
   return (
     <main className="page">
       <header className="header">
@@ -178,12 +187,13 @@ export default function Home() {
               </div>
 
               <div className="locationButtons">
-                <a
-                  href={`tel:${loc.phone.replace(/\s/g, "")}`}
-                  className="primarySmallBtn"
+                <button
+                  type="button"
+                  onClick={() => handleCall(loc.phone)}
+                  className="primarySmallBtn callBtn"
                 >
                   Call
-                </a>
+                </button>
                 <a
                   href={loc.map}
                   target="_blank"
@@ -456,6 +466,8 @@ export default function Home() {
           border-radius: 999px;
           font-weight: 600;
           transition: 0.2s ease;
+          border: none;
+          cursor: pointer;
         }
 
         .primaryBtn {
@@ -624,6 +636,10 @@ export default function Home() {
           display: flex;
           gap: 12px;
           flex-wrap: wrap;
+        }
+
+        .callBtn {
+          font-family: inherit;
         }
 
         .menuGrid {

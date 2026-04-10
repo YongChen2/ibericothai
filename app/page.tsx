@@ -269,7 +269,7 @@ export default function Home() {
       subtitle: t.subtitles.entenca,
       address: "Carrer d’Entença 140, Barcelona",
       phone: "+34 931 39 55 72",
-      hours: "Daily · 10:00 – 00:00",
+      hours: "Daily · 10:00 – 23:00",
       map: "https://maps.google.com/?q=Carrer+d%27Entenca+140+Barcelona",
     },
     {
@@ -277,7 +277,7 @@ export default function Home() {
       subtitle: t.subtitles.sagrada,
       address: "C/ de Padilla, 288, Barcelona",
       phone: "+34 688 583 766",
-      hours: "Daily · 10:00 – 20:00",
+      hours: "Daily · 10:00 – 23:00",
       map: "https://maps.google.com/?q=Carrer+de+Padilla+288+Barcelona",
     },
   ];

@@ -59,14 +59,16 @@ export default function Home() {
     },
   ];
 
-const gallery = [
-  "/Obrazek.png",
-  "/Obrazek1.png",
-  "/Obrazek2.png",
-  "/Obrazek3.png",
-  "/Obrazek4.png",
-  "/Obrazek5.png",
-];
+  const gallery = [
+    "/Obrazek.png",
+    "/Obrazek1.png",
+    "/Obrazek2.png",
+    "/Obrazek3.png",
+    "/Obrazek4.png",
+    "/Obrazek5.png",
+    "/Obrazek.png",
+    "/Obrazek1.png",
+  ];
 
   const pdfCards = [
     {
@@ -765,7 +767,7 @@ const gallery = [
 
         .galleryGrid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          grid-template-columns: repeat(4, 1fr);
           gap: 18px;
         }
 
@@ -840,6 +842,10 @@ const gallery = [
             min-height: 360px;
             height: 360px;
           }
+
+          .galleryGrid {
+            grid-template-columns: repeat(2, 1fr);
+          }
         }
 
         @media (max-width: 640px) {
@@ -881,6 +887,10 @@ const gallery = [
           .headerLogo {
             width: 40px;
             height: 40px;
+          }
+
+          .galleryGrid {
+            grid-template-columns: 1fr;
           }
         }
       `}</style>

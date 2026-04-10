@@ -12,9 +12,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "IbericoThai",
-  description: "Thai & Spanish fusion restaurant in Barcelona",
+export const metadata = {
+  title: "Iberico Thai – Thai & Spanish Fusion",
+  description: "Modern Thai & Spanish fusion restaurant in Barcelona.",
+  icons: {
+    icon: "/iberico.png",
+  },
 };
 
 export default function RootLayout({

@@ -61,11 +61,11 @@ export default function Home() {
 
 const gallery = [
   "/Obrazek.png",
-  "/Obrázek1.png",
-  "/Obrázek2.png",
-  "/Obrázek3.png",
-  "/Obrázek4.png",
-  "/Obrázek5.png",
+  "/Obrazek1.png",
+  "/Obrazek2.png",
+  "/Obrazek3.png",
+  "/Obrazek4.png",
+  "/Obrazek5.png",
 ];
 
   const pdfCards = [

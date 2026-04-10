@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 
+type Lang = "en" | "es" | "ca";
+
 export default function Home() {
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState<Lang>("en");
 
   const content = {
     en: {
@@ -50,11 +52,14 @@ export default function Home() {
         label: "Why Choose Us",
         title: "Fresh, fast, and easy to enjoy",
         item1Title: "Fresh ingredients",
-        item1Text: "Balanced flavors, colorful presentation, and simple food people want to come back for.",
+        item1Text:
+          "Balanced flavors, colorful presentation, and simple food people want to come back for.",
         item2Title: "Two convenient spots",
-        item2Text: "Great for tourists, locals, and anyone exploring Barcelona.",
+        item2Text:
+          "Great for tourists, locals, and anyone exploring Barcelona.",
         item3Title: "Shared menu",
-        item3Text: "No confusion. Same dishes, same quality, whichever location you choose.",
+        item3Text:
+          "No confusion. Same dishes, same quality, whichever location you choose.",
       },
       gallery: {
         label: "Gallery",
@@ -67,6 +72,24 @@ export default function Home() {
         text: "Two locations in Barcelona, one simple experience. Check the menu, choose your nearest branch, and enjoy the food.",
       },
       footer: "© 2026 Iberico Thai. All rights reserved.",
+      subtitles: {
+        entenca: "Near Train Station",
+        sagrada: "Near Sagrada Familia",
+      },
+      dishes: {
+        padThai:
+          "Classic stir-fried rice noodles with a fresh, vibrant flavor.",
+        redCurry:
+          "Creamy Thai red curry with aromatic herbs and rich flavor.",
+        friedRice:
+          "Wok-fried rice with vegetables, egg, and your choice of protein.",
+        tomYum:
+          "Hot and sour Thai soup with bold citrus and herbal notes.",
+        mangoStickyRice:
+          "Sweet mango served with soft sticky rice and coconut.",
+        thaiIcedTea:
+          "Refreshing creamy tea with a smooth sweet finish.",
+      },
     },
 
     es: {
@@ -113,11 +136,14 @@ export default function Home() {
         label: "Por Qué Elegirnos",
         title: "Fresco, rápido y fácil de disfrutar",
         item1Title: "Ingredientes frescos",
-        item1Text: "Sabores equilibrados, presentación colorida y comida sencilla a la que la gente quiere volver.",
+        item1Text:
+          "Sabores equilibrados, presentación colorida y comida sencilla a la que la gente quiere volver.",
         item2Title: "Dos ubicaciones cómodas",
-        item2Text: "Ideal para turistas, locales y cualquiera que esté explorando Barcelona.",
+        item2Text:
+          "Ideal para turistas, locales y cualquiera que esté explorando Barcelona.",
         item3Title: "Menú compartido",
-        item3Text: "Sin confusión. Los mismos platos, la misma calidad, en cualquier ubicación que elijas.",
+        item3Text:
+          "Sin confusión. Los mismos platos, la misma calidad, en cualquier ubicación que elijas.",
       },
       gallery: {
         label: "Galería",
@@ -130,6 +156,24 @@ export default function Home() {
         text: "Dos ubicaciones en Barcelona, una experiencia sencilla. Consulta el menú, elige tu sucursal más cercana y disfruta de la comida.",
       },
       footer: "© 2026 Iberico Thai. Todos los derechos reservados.",
+      subtitles: {
+        entenca: "Cerca de la estación de tren",
+        sagrada: "Cerca de la Sagrada Familia",
+      },
+      dishes: {
+        padThai:
+          "Clásicos fideos de arroz salteados con un sabor fresco y vibrante.",
+        redCurry:
+          "Curry rojo tailandés cremoso con hierbas aromáticas y sabor intenso.",
+        friedRice:
+          "Arroz frito al wok con verduras, huevo y tu elección de proteína.",
+        tomYum:
+          "Sopa tailandesa picante y ácida con intensas notas cítricas y herbales.",
+        mangoStickyRice:
+          "Mango dulce servido con arroz pegajoso suave y coco.",
+        thaiIcedTea:
+          "Té cremoso y refrescante con un final dulce y suave.",
+      },
     },
 
     ca: {
@@ -176,11 +220,14 @@ export default function Home() {
         label: "Per Què Triar-nos",
         title: "Fresc, ràpid i fàcil de gaudir",
         item1Title: "Ingredients frescos",
-        item1Text: "Sabors equilibrats, presentació colorida i menjar senzill al qual la gent vol tornar.",
+        item1Text:
+          "Sabors equilibrats, presentació colorida i menjar senzill al qual la gent vol tornar.",
         item2Title: "Dues ubicacions pràctiques",
-        item2Text: "Ideal per a turistes, locals i qualsevol que estigui descobrint Barcelona.",
+        item2Text:
+          "Ideal per a turistes, locals i qualsevol que estigui descobrint Barcelona.",
         item3Title: "Menú compartit",
-        item3Text: "Sense confusió. Els mateixos plats, la mateixa qualitat, sigui quina sigui la ubicació que triïs.",
+        item3Text:
+          "Sense confusió. Els mateixos plats, la mateixa qualitat, sigui quina sigui la ubicació que triïs.",
       },
       gallery: {
         label: "Galeria",
@@ -193,20 +240,33 @@ export default function Home() {
         text: "Dues ubicacions a Barcelona, una experiència senzilla. Consulta el menú, tria la sucursal més propera i gaudeix del menjar.",
       },
       footer: "© 2026 Iberico Thai. Tots els drets reservats.",
+      subtitles: {
+        entenca: "A prop de l’estació de tren",
+        sagrada: "A prop de la Sagrada Família",
+      },
+      dishes: {
+        padThai:
+          "Clàssics fideus d’arròs saltats amb un sabor fresc i vibrant.",
+        redCurry:
+          "Curry vermell tailandès cremós amb herbes aromàtiques i un sabor intens.",
+        friedRice:
+          "Arròs fregit al wok amb verdures, ou i la teva elecció de proteïna.",
+        tomYum:
+          "Sopa tailandesa picant i àcida amb notes cítriques i herbals intenses.",
+        mangoStickyRice:
+          "Mango dolç servit amb arròs glutinós suau i coco.",
+        thaiIcedTea:
+          "Te cremós i refrescant amb un final dolç i suau.",
+      },
     },
-  };
+  } as const;
 
   const t = content[lang];
 
   const locations = [
     {
       name: "Entença",
-      subtitle:
-        lang === "en"
-          ? "Near Train Station"
-          : lang === "es"
-          ? "Cerca de la estación de tren"
-          : "A prop de l’estació de tren",
+      subtitle: t.subtitles.entenca,
       address: "Carrer d’Entença 140, Barcelona",
       phone: "+34 931 39 55 72",
       hours: "Daily · 10:00 – 00:00",
@@ -214,12 +274,7 @@ export default function Home() {
     },
     {
       name: "Sagrada Familia",
-      subtitle:
-        lang === "en"
-          ? "Near Sagrada Familia"
-          : lang === "es"
-          ? "Cerca de la Sagrada Familia"
-          : "A prop de la Sagrada Família",
+      subtitle: t.subtitles.sagrada,
       address: "C/ de Padilla, 288, Barcelona",
       phone: "+34 688 583 766",
       hours: "Daily · 10:00 – 20:00",
@@ -230,67 +285,37 @@ export default function Home() {
   const dishes = [
     {
       title: "Pad Thai",
-      desc:
-        lang === "en"
-          ? "Classic stir-fried rice noodles with a fresh, vibrant flavor."
-          : lang === "es"
-          ? "Clásicos fideos de arroz salteados con un sabor fresco y vibrante."
-          : "Clàssics fideus d’arròs saltats amb un sabor fresc i vibrant.",
+      desc: t.dishes.padThai,
       price: "€11.90",
       image: "/PadThai.png",
     },
     {
       title: "Red Curry",
-      desc:
-        lang === "en"
-          ? "Creamy Thai red curry with aromatic herbs and rich flavor."
-          : lang === "es"
-          ? "Curry rojo tailandés cremoso con hierbas aromáticas y sabor intenso."
-          : "Curry vermell tailandès cremós amb herbes aromàtiques i un sabor intens.",
+      desc: t.dishes.redCurry,
       price: "€12.50",
       image: "/RedCurry.png",
     },
     {
       title: "Fried Rice",
-      desc:
-        lang === "en"
-          ? "Wok-fried rice with vegetables, egg, and your choice of protein."
-          : lang === "es"
-          ? "Arroz frito al wok con verduras, huevo y tu elección de proteína."
-          : "Arròs fregit al wok amb verdures, ou i la teva elecció de proteïna.",
+      desc: t.dishes.friedRice,
       price: "€10.90",
       image: "/FriedRice.png",
     },
     {
       title: "Tom Yum",
-      desc:
-        lang === "en"
-          ? "Hot and sour Thai soup with bold citrus and herbal notes."
-          : lang === "es"
-          ? "Sopa tailandesa picante y ácida con intensas notas cítricas y herbales."
-          : "Sopa tailandesa picant i àcida amb notes cítriques i herbals intenses.",
+      desc: t.dishes.tomYum,
       price: "€8.90",
       image: "/omyum.png",
     },
     {
       title: "Mango Sticky Rice",
-      desc:
-        lang === "en"
-          ? "Sweet mango served with soft sticky rice and coconut."
-          : lang === "es"
-          ? "Mango dulce servido con arroz pegajoso suave y coco."
-          : "Mango dolç servit amb arròs glutinós suau i coco.",
+      desc: t.dishes.mangoStickyRice,
       price: "€6.90",
       image: "/stickyricemango.PNG",
     },
     {
       title: "Thai Iced Tea",
-      desc:
-        lang === "en"
-          ? "Refreshing creamy tea with a smooth sweet finish."
-          : lang === "es"
-          ? "Té cremoso y refrescante con un final dulce y suave."
-          : "Te cremós i refrescant amb un final dolç i suau.",
+      desc: t.dishes.thaiIcedTea,
       price: "€4.50",
       image: "/ThaiIcedTea.PNG",
     },

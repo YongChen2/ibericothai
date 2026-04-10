@@ -55,7 +55,7 @@ export default function Home() {
       title: "Thai Iced Tea",
       desc: "Refreshing creamy tea with a smooth sweet finish.",
       price: "€4.50",
-      image: "/ThailcedTea.PNG",
+      image: "/ThaiIcedTea.PNG",
     },
   ];
 

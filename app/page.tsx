@@ -134,7 +134,7 @@ export default function Home() {
 
         <div className="heroCard">
           <img
-            src="/RedCurry.png"
+            src="/uvodfotka.png"
             alt="Iberico Thai featured dish"
             className="heroImage"
           />

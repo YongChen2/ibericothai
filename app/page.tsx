@@ -79,7 +79,8 @@ export default function Home() {
       title: "Drinks Menu",
       desc: "Open the full drinks menu in PDF format.",
       button: "Open Drinks PDF",
-      link: "/drinks-menu.pdf",
+      link: "/drinkmenu.pdf",
+      image: "/drinknahled.png",
     },
   ];
 

@@ -15,8 +15,6 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Iberico Thai – Thai & Spanish Fusion",
   description: "Modern Thai & Spanish fusion restaurant in Barcelona.",
-  icons: {
-    icon: "/favicon.png",
   },
 };
 

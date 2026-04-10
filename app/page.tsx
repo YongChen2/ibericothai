@@ -65,7 +65,7 @@ export default function Home() {
     "/FriedRice.png",
     "/omyum.png",
     "/stickyricemango.PNG",
-    "/ThailcedTea.PNG",
+    "/ThaiIcedTea.PNG",
   ];
 
   const pdfCards = [
@@ -74,6 +74,7 @@ export default function Home() {
       desc: "Open the complete food menu in PDF format.",
       button: "Open Food PDF",
       link: "/food-menu.pdf",
+      image: "/foodnahled.png",
     },
     {
       title: "Drinks Menu",
@@ -234,8 +235,13 @@ export default function Home() {
                 rel="noreferrer"
                 className="menuCard pdfCard"
               >
-                <div className="pdfTop">
-                  <span className="pdfBadge">PDF MENU</span>
+                <div className="pdfImageWrap">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="pdfPreviewImage"
+                  />
+                  <div className="pdfOverlayBadge">PDF MENU</div>
                 </div>
 
                 <div className="pdfContent">
@@ -288,9 +294,7 @@ export default function Home() {
           <div className="sectionIntro center">
             <span className="sectionLabel">Gallery</span>
             <h2>Food and atmosphere</h2>
-            <p>
-              A simple gallery preview with your real dish images.
-            </p>
+            <p>A simple gallery preview with your real dish images.</p>
           </div>
 
           <div className="galleryGrid">
@@ -687,8 +691,7 @@ export default function Home() {
           border: 1px solid rgba(178, 112, 48, 0.14);
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
-          min-height: 320px;
+          min-height: 420px;
           transition: 0.25s ease;
         }
 
@@ -697,11 +700,28 @@ export default function Home() {
           box-shadow: 0 22px 50px rgba(178, 112, 48, 0.14);
         }
 
-        .pdfTop {
-          padding: 22px 22px 0;
+        .pdfImageWrap {
+          position: relative;
+          width: 100%;
+          height: 220px;
+          background: #f3eadf;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
         }
 
-        .pdfBadge {
+        .pdfPreviewImage {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
+        .pdfOverlayBadge {
+          position: absolute;
+          top: 16px;
+          left: 16px;
           display: inline-block;
           background: #b27030;
           color: white;
@@ -710,14 +730,18 @@ export default function Home() {
           letter-spacing: 0.08em;
           padding: 8px 12px;
           border-radius: 999px;
+          z-index: 2;
         }
 
         .pdfContent {
           padding: 22px;
+          display: flex;
+          flex-direction: column;
+          flex: 1;
         }
 
         .pdfContent h3 {
-          margin: 18px 0 12px;
+          margin: 0 0 12px;
           font-size: 24px;
         }
 
@@ -737,6 +761,8 @@ export default function Home() {
           border-radius: 999px;
           font-size: 14px;
           font-weight: 600;
+          width: fit-content;
+          margin-top: auto;
         }
 
         .featureBox {
@@ -883,6 +909,10 @@ export default function Home() {
           .headerLogo {
             width: 40px;
             height: 40px;
+          }
+
+          .pdfImageWrap {
+            height: 200px;
           }
         }
       `}</style>

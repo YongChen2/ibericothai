@@ -25,40 +25,75 @@ export default function Home() {
       title: "Pad Thai",
       desc: "Classic stir-fried rice noodles with a fresh, vibrant flavor.",
       price: "€11.90",
+      image: "/PadThai.png",
     },
     {
-      title: "Green Curry",
-      desc: "Creamy Thai curry with aromatic herbs and smooth spice.",
+      title: "Red Curry",
+      desc: "Creamy Thai red curry with aromatic herbs and rich flavor.",
       price: "€12.50",
+      image: "/RedCurry.png",
     },
     {
       title: "Fried Rice",
       desc: "Wok-fried rice with vegetables, egg, and your choice of protein.",
       price: "€10.90",
+      image: "/FriedRice.png",
     },
     {
       title: "Tom Yum",
       desc: "Hot and sour Thai soup with bold citrus and herbal notes.",
       price: "€8.90",
+      image: "/omyum.png",
     },
     {
       title: "Mango Sticky Rice",
       desc: "Sweet mango served with soft sticky rice and coconut.",
       price: "€6.90",
+      image: "/stickyricemango.PNG",
     },
     {
       title: "Thai Iced Tea",
       desc: "Refreshing creamy tea with a smooth sweet finish.",
       price: "€4.50",
+      image: "/ThailcedTea.PNG",
     },
   ];
 
-  const gallery = [1, 2, 3, 4, 5, 6];
+  const gallery = [
+    "/PadThai.png",
+    "/RedCurry.png",
+    "/FriedRice.png",
+    "/omyum.png",
+    "/stickyricemango.PNG",
+    "/ThailcedTea.PNG",
+  ];
+
+  const pdfCards = [
+    {
+      title: "Full Food Menu",
+      desc: "Open the complete food menu in PDF format.",
+      button: "Open Food PDF",
+      link: "/food-menu.pdf",
+    },
+    {
+      title: "Drinks Menu",
+      desc: "Open the full drinks menu in PDF format.",
+      button: "Open Drinks PDF",
+      link: "/drinks-menu.pdf",
+    },
+  ];
 
   return (
     <main className="page">
       <header className="header">
-        <div className="logo">IBERICO THAI</div>
+        <div className="brandWrap">
+          <img
+            src="/Iberico thai logo.PNG"
+            alt="Iberico Thai Logo"
+            className="headerLogo"
+          />
+          <div className="logo">IBERICO THAI</div>
+        </div>
 
         <nav className="nav">
           <a href="#home">Home</a>
@@ -98,7 +133,11 @@ export default function Home() {
         </div>
 
         <div className="heroCard">
-          <div className="heroImagePlaceholder">Add hero food image here</div>
+          <img
+            src="/RedCurry.png"
+            alt="Iberico Thai featured dish"
+            className="heroImage"
+          />
         </div>
       </section>
 
@@ -162,16 +201,19 @@ export default function Home() {
             <span className="sectionLabel">Menu Preview</span>
             <h2>Popular dishes everyone loves</h2>
             <p>
-              A simple preview of your shared menu. Later we can expand this
-              into full categories like noodles, rice, curry, soups, drinks,
-              and desserts.
+              A simple preview of your shared menu. You can also open the full
+              food and drinks menu as PDF below.
             </p>
           </div>
 
           <div className="menuGrid">
             {dishes.map((dish, index) => (
               <div className="menuCard" key={index}>
-                <div className="menuImagePlaceholder">Food Image</div>
+                <img
+                  src={dish.image}
+                  alt={dish.title}
+                  className="menuImage"
+                />
 
                 <div className="menuContent">
                   <div className="menuTop">
@@ -181,6 +223,26 @@ export default function Home() {
                   <p>{dish.desc}</p>
                 </div>
               </div>
+            ))}
+
+            {pdfCards.map((item, index) => (
+              <a
+                key={`pdf-${index}`}
+                href={item.link}
+                target="_blank"
+                rel="noreferrer"
+                className="menuCard pdfCard"
+              >
+                <div className="pdfTop">
+                  <span className="pdfBadge">PDF MENU</span>
+                </div>
+
+                <div className="pdfContent">
+                  <h3>{item.title}</h3>
+                  <p>{item.desc}</p>
+                  <div className="pdfButton">{item.button}</div>
+                </div>
+              </a>
             ))}
           </div>
         </div>
@@ -226,15 +288,18 @@ export default function Home() {
             <span className="sectionLabel">Gallery</span>
             <h2>Food and atmosphere</h2>
             <p>
-              Replace these placeholders with real photos of dishes, drinks, and
-              your restaurant.
+              A simple gallery preview with your real dish images.
             </p>
           </div>
 
           <div className="galleryGrid">
-            {gallery.map((item) => (
-              <div className="galleryItem" key={item}>
-                <div className="galleryPlaceholder">Photo {item}</div>
+            {gallery.map((item, index) => (
+              <div className="galleryItem" key={index}>
+                <img
+                  src={item}
+                  alt={`Gallery ${index + 1}`}
+                  className="galleryImage"
+                />
               </div>
             ))}
           </div>
@@ -296,6 +361,22 @@ export default function Home() {
           background: rgba(248, 246, 242, 0.92);
           backdrop-filter: blur(12px);
           border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .brandWrap {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+
+        .headerLogo {
+          width: 46px;
+          height: 46px;
+          object-fit: contain;
+          border-radius: 12px;
+          background: white;
+          padding: 4px;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
         }
 
         .logo {
@@ -426,21 +507,13 @@ export default function Home() {
           box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
         }
 
-        .heroImagePlaceholder {
+        .heroImage {
+          width: 100%;
           min-height: 520px;
+          height: 520px;
+          object-fit: cover;
           border-radius: 22px;
-          background: linear-gradient(
-            135deg,
-            #f3e8db 0%,
-            #f7efe7 50%,
-            #ece6dd 100%
-          );
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: #8c7d6d;
-          font-size: 18px;
-          font-weight: 600;
+          display: block;
         }
 
         .section {
@@ -565,19 +638,11 @@ export default function Home() {
           box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
         }
 
-        .menuImagePlaceholder {
+        .menuImage {
+          width: 100%;
           height: 220px;
-          background: linear-gradient(
-            135deg,
-            #ead8c4 0%,
-            #f4e7d9 50%,
-            #e7d2bf 100%
-          );
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: #8c7259;
-          font-weight: 600;
+          object-fit: cover;
+          display: block;
         }
 
         .menuContent {
@@ -612,6 +677,65 @@ export default function Home() {
           margin: 0;
           color: #5f5f5f;
           line-height: 1.7;
+        }
+
+        .pdfCard {
+          text-decoration: none;
+          color: inherit;
+          background: linear-gradient(135deg, #fff8ef 0%, #f7eadb 100%);
+          border: 1px solid rgba(178, 112, 48, 0.14);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          min-height: 320px;
+          transition: 0.25s ease;
+        }
+
+        .pdfCard:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 22px 50px rgba(178, 112, 48, 0.14);
+        }
+
+        .pdfTop {
+          padding: 22px 22px 0;
+        }
+
+        .pdfBadge {
+          display: inline-block;
+          background: #b27030;
+          color: white;
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          padding: 8px 12px;
+          border-radius: 999px;
+        }
+
+        .pdfContent {
+          padding: 22px;
+        }
+
+        .pdfContent h3 {
+          margin: 18px 0 12px;
+          font-size: 24px;
+        }
+
+        .pdfContent p {
+          margin: 0 0 24px;
+          line-height: 1.7;
+          color: #5f5f5f;
+        }
+
+        .pdfButton {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          background: #1f1f1f;
+          color: white;
+          padding: 12px 18px;
+          border-radius: 999px;
+          font-size: 14px;
+          font-weight: 600;
         }
 
         .featureBox {
@@ -653,19 +777,11 @@ export default function Home() {
           box-shadow: 0 14px 40px rgba(0, 0, 0, 0.05);
         }
 
-        .galleryPlaceholder {
+        .galleryImage {
+          width: 100%;
           height: 250px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: linear-gradient(
-            135deg,
-            #efe2d3 0%,
-            #f7eee4 50%,
-            #eadac8 100%
-          );
-          color: #8d7c6a;
-          font-weight: 600;
+          object-fit: cover;
+          display: block;
         }
 
         .contactBox {
@@ -721,8 +837,9 @@ export default function Home() {
             font-size: 48px;
           }
 
-          .heroImagePlaceholder {
+          .heroImage {
             min-height: 360px;
+            height: 360px;
           }
         }
 
@@ -760,6 +877,11 @@ export default function Home() {
 
           .featureBox {
             padding: 26px;
+          }
+
+          .headerLogo {
+            width: 40px;
+            height: 40px;
           }
         }
       `}</style>

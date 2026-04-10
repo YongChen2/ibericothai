@@ -16,7 +16,7 @@ export const metadata = {
   title: "Iberico Thai – Thai & Spanish Fusion",
   description: "Modern Thai & Spanish fusion restaurant in Barcelona.",
   icons: {
-    icon: "/iberico.png",
+    icon: "/favicon.png",
   },
 };
 

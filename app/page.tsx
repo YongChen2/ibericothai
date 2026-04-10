@@ -337,7 +337,7 @@ export default function Home() {
       title: t.pdf.foodTitle,
       desc: t.pdf.foodDesc,
       button: t.pdf.foodBtn,
-      link: "/food-menu.pdf",
+      link: "/foodmenu.pdf",
     },
     {
       title: t.pdf.drinksTitle,

@@ -1,4 +1,5 @@
 "use client";
+import type { CSSProperties } from "react";
 
 export default function Home() {
   const locations = [

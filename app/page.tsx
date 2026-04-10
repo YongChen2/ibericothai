@@ -60,12 +60,12 @@ export default function Home() {
   ];
 
   const gallery = [
-    "/PadThai.png",
-    "/RedCurry.png",
-    "/FriedRice.png",
-    "/omyum.png",
-    "/stickyricemango.PNG",
-    "/ThaiIcedTea.PNG",
+  "/Obrazek.png",
+  "/Obrazek1.png",
+  "/Obrazek2.png",
+  "/Obrazek3.png",
+  "/Obrazek4.png",
+  "/Obrazek5.png",
   ];
 
   const pdfCards = [

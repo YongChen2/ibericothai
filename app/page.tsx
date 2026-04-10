@@ -60,7 +60,7 @@ export default function Home() {
   ];
 
 const gallery = [
-  "/Obrázek.png",
+  "/Obrazek.png",
   "/Obrázek1.png",
   "/Obrázek2.png",
   "/Obrázek3.png",

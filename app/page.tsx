@@ -59,14 +59,14 @@ export default function Home() {
     },
   ];
 
-  const gallery = [
-    "/PadThai.png",
-    "/RedCurry.png",
-    "/FriedRice.png",
-    "/omyum.png",
-    "/stickyricemango.PNG",
-    "/ThailcedTea.PNG",
-  ];
+const gallery = [
+  "/Obrázek.png",
+  "/Obrázek1.png",
+  "/Obrázek2.png",
+  "/Obrázek3.png",
+  "/Obrázek4.png",
+  "/Obrázek5.png",
+];
 
   const pdfCards = [
     {

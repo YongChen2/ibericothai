@@ -1,10 +1,212 @@
 "use client";
 
+import { useState } from "react";
+
 export default function Home() {
+  const [lang, setLang] = useState("en");
+
+  const content = {
+    en: {
+      nav: {
+        home: "Home",
+        locations: "Locations",
+        menu: "Menu",
+        gallery: "Gallery",
+        contact: "Contact",
+      },
+      hero: {
+        badge: "Thai & Spanish Fusion • Barcelona",
+        title1: "Fresh food.",
+        title2: "Simple style.",
+        title3: "Two locations.",
+        text: "Discover Iberico Thai in Barcelona with one shared menu, two convenient locations, and a modern casual dining experience inspired by Thai flavors and a vibrant city atmosphere.",
+        menuBtn: "View Menu",
+        locationBtn: "Choose Location",
+      },
+      locations: {
+        label: "Our Locations",
+        title: "Two places, one menu, same taste",
+        text: "Visit the branch that suits you best. Both locations offer the same menu, fast service, and the Iberico Thai experience.",
+        address: "Address",
+        phone: "Phone",
+        hours: "Hours",
+        call: "Call",
+        route: "Route",
+      },
+      menu: {
+        label: "Menu Preview",
+        title: "Popular dishes everyone loves",
+        text: "A simple preview of your shared menu. You can also open the full food and drinks menu as PDF below.",
+      },
+      pdf: {
+        foodTitle: "Full Food Menu",
+        foodDesc: "Open the complete food menu in PDF format.",
+        foodBtn: "Open Food PDF",
+        drinksTitle: "Drinks Menu",
+        drinksDesc: "Open the full drinks menu in PDF format.",
+        drinksBtn: "Open Drinks PDF",
+      },
+      feature: {
+        label: "Why Choose Us",
+        title: "Fresh, fast, and easy to enjoy",
+        item1Title: "Fresh ingredients",
+        item1Text: "Balanced flavors, colorful presentation, and simple food people want to come back for.",
+        item2Title: "Two convenient spots",
+        item2Text: "Great for tourists, locals, and anyone exploring Barcelona.",
+        item3Title: "Shared menu",
+        item3Text: "No confusion. Same dishes, same quality, whichever location you choose.",
+      },
+      gallery: {
+        label: "Gallery",
+        title: "Food and atmosphere",
+        text: "A simple gallery preview with your real dish images.",
+      },
+      contact: {
+        label: "Contact",
+        title: "Come visit Iberico Thai",
+        text: "Two locations in Barcelona, one simple experience. Check the menu, choose your nearest branch, and enjoy the food.",
+      },
+      footer: "© 2026 Iberico Thai. All rights reserved.",
+    },
+
+    es: {
+      nav: {
+        home: "Inicio",
+        locations: "Ubicaciones",
+        menu: "Menú",
+        gallery: "Galería",
+        contact: "Contacto",
+      },
+      hero: {
+        badge: "Fusión Thai y Española • Barcelona",
+        title1: "Comida fresca.",
+        title2: "Estilo simple.",
+        title3: "Dos ubicaciones.",
+        text: "Descubre Iberico Thai en Barcelona con un menú compartido, dos ubicaciones convenientes y una experiencia gastronómica moderna e informal inspirada en sabores tailandeses y el ambiente vibrante de la ciudad.",
+        menuBtn: "Ver Menú",
+        locationBtn: "Elegir Ubicación",
+      },
+      locations: {
+        label: "Nuestras Ubicaciones",
+        title: "Dos lugares, un menú, el mismo sabor",
+        text: "Visita la sucursal que más te convenga. Ambas ubicaciones ofrecen el mismo menú, servicio rápido y la experiencia Iberico Thai.",
+        address: "Dirección",
+        phone: "Teléfono",
+        hours: "Horario",
+        call: "Llamar",
+        route: "Ruta",
+      },
+      menu: {
+        label: "Vista previa del menú",
+        title: "Platos populares que todos aman",
+        text: "Una vista previa sencilla de su menú compartido. También puedes abrir el menú completo de comida y bebidas en PDF abajo.",
+      },
+      pdf: {
+        foodTitle: "Menú Completo de Comida",
+        foodDesc: "Abre el menú completo de comida en formato PDF.",
+        foodBtn: "Abrir PDF de Comida",
+        drinksTitle: "Menú de Bebidas",
+        drinksDesc: "Abre el menú completo de bebidas en formato PDF.",
+        drinksBtn: "Abrir PDF de Bebidas",
+      },
+      feature: {
+        label: "Por Qué Elegirnos",
+        title: "Fresco, rápido y fácil de disfrutar",
+        item1Title: "Ingredientes frescos",
+        item1Text: "Sabores equilibrados, presentación colorida y comida sencilla a la que la gente quiere volver.",
+        item2Title: "Dos ubicaciones cómodas",
+        item2Text: "Ideal para turistas, locales y cualquiera que esté explorando Barcelona.",
+        item3Title: "Menú compartido",
+        item3Text: "Sin confusión. Los mismos platos, la misma calidad, en cualquier ubicación que elijas.",
+      },
+      gallery: {
+        label: "Galería",
+        title: "Comida y ambiente",
+        text: "Una vista previa sencilla de la galería con imágenes reales de tus platos.",
+      },
+      contact: {
+        label: "Contacto",
+        title: "Ven a visitar Iberico Thai",
+        text: "Dos ubicaciones en Barcelona, una experiencia sencilla. Consulta el menú, elige tu sucursal más cercana y disfruta de la comida.",
+      },
+      footer: "© 2026 Iberico Thai. Todos los derechos reservados.",
+    },
+
+    ca: {
+      nav: {
+        home: "Inici",
+        locations: "Ubicacions",
+        menu: "Menú",
+        gallery: "Galeria",
+        contact: "Contacte",
+      },
+      hero: {
+        badge: "Fusió Thai i Espanyola • Barcelona",
+        title1: "Menjar fresc.",
+        title2: "Estil simple.",
+        title3: "Dues ubicacions.",
+        text: "Descobreix Iberico Thai a Barcelona amb un menú compartit, dues ubicacions còmodes i una experiència gastronòmica moderna i informal inspirada en sabors tailandesos i l’ambient vibrant de la ciutat.",
+        menuBtn: "Veure Menú",
+        locationBtn: "Triar Ubicació",
+      },
+      locations: {
+        label: "Les Nostres Ubicacions",
+        title: "Dos llocs, un menú, el mateix gust",
+        text: "Visita la sucursal que et vagi millor. Ambdues ubicacions ofereixen el mateix menú, servei ràpid i l’experiència Iberico Thai.",
+        address: "Adreça",
+        phone: "Telèfon",
+        hours: "Horari",
+        call: "Trucar",
+        route: "Ruta",
+      },
+      menu: {
+        label: "Vista prèvia del menú",
+        title: "Plats populars que agraden a tothom",
+        text: "Una vista prèvia senzilla del vostre menú compartit. També pots obrir el menú complet de menjar i begudes en PDF a sota.",
+      },
+      pdf: {
+        foodTitle: "Menú Complet de Menjar",
+        foodDesc: "Obre el menú complet de menjar en format PDF.",
+        foodBtn: "Obrir PDF de Menjar",
+        drinksTitle: "Menú de Begudes",
+        drinksDesc: "Obre el menú complet de begudes en format PDF.",
+        drinksBtn: "Obrir PDF de Begudes",
+      },
+      feature: {
+        label: "Per Què Triar-nos",
+        title: "Fresc, ràpid i fàcil de gaudir",
+        item1Title: "Ingredients frescos",
+        item1Text: "Sabors equilibrats, presentació colorida i menjar senzill al qual la gent vol tornar.",
+        item2Title: "Dues ubicacions pràctiques",
+        item2Text: "Ideal per a turistes, locals i qualsevol que estigui descobrint Barcelona.",
+        item3Title: "Menú compartit",
+        item3Text: "Sense confusió. Els mateixos plats, la mateixa qualitat, sigui quina sigui la ubicació que triïs.",
+      },
+      gallery: {
+        label: "Galeria",
+        title: "Menjar i ambient",
+        text: "Una vista prèvia senzilla de la galeria amb imatges reals dels teus plats.",
+      },
+      contact: {
+        label: "Contacte",
+        title: "Vine a visitar Iberico Thai",
+        text: "Dues ubicacions a Barcelona, una experiència senzilla. Consulta el menú, tria la sucursal més propera i gaudeix del menjar.",
+      },
+      footer: "© 2026 Iberico Thai. Tots els drets reservats.",
+    },
+  };
+
+  const t = content[lang];
+
   const locations = [
     {
       name: "Entença",
-      subtitle: "Near Train Station",
+      subtitle:
+        lang === "en"
+          ? "Near Train Station"
+          : lang === "es"
+          ? "Cerca de la estación de tren"
+          : "A prop de l’estació de tren",
       address: "Carrer d’Entença 140, Barcelona",
       phone: "+34 931 39 55 72",
       hours: "Daily · 10:00 – 00:00",
@@ -12,7 +214,12 @@ export default function Home() {
     },
     {
       name: "Sagrada Familia",
-      subtitle: "Near Sagrada Familia",
+      subtitle:
+        lang === "en"
+          ? "Near Sagrada Familia"
+          : lang === "es"
+          ? "Cerca de la Sagrada Familia"
+          : "A prop de la Sagrada Família",
       address: "C/ de Padilla, 288, Barcelona",
       phone: "+34 688 583 766",
       hours: "Daily · 10:00 – 20:00",
@@ -23,37 +230,67 @@ export default function Home() {
   const dishes = [
     {
       title: "Pad Thai",
-      desc: "Classic stir-fried rice noodles with a fresh, vibrant flavor.",
+      desc:
+        lang === "en"
+          ? "Classic stir-fried rice noodles with a fresh, vibrant flavor."
+          : lang === "es"
+          ? "Clásicos fideos de arroz salteados con un sabor fresco y vibrante."
+          : "Clàssics fideus d’arròs saltats amb un sabor fresc i vibrant.",
       price: "€11.90",
       image: "/PadThai.png",
     },
     {
       title: "Red Curry",
-      desc: "Creamy Thai red curry with aromatic herbs and rich flavor.",
+      desc:
+        lang === "en"
+          ? "Creamy Thai red curry with aromatic herbs and rich flavor."
+          : lang === "es"
+          ? "Curry rojo tailandés cremoso con hierbas aromáticas y sabor intenso."
+          : "Curry vermell tailandès cremós amb herbes aromàtiques i un sabor intens.",
       price: "€12.50",
       image: "/RedCurry.png",
     },
     {
       title: "Fried Rice",
-      desc: "Wok-fried rice with vegetables, egg, and your choice of protein.",
+      desc:
+        lang === "en"
+          ? "Wok-fried rice with vegetables, egg, and your choice of protein."
+          : lang === "es"
+          ? "Arroz frito al wok con verduras, huevo y tu elección de proteína."
+          : "Arròs fregit al wok amb verdures, ou i la teva elecció de proteïna.",
       price: "€10.90",
       image: "/FriedRice.png",
     },
     {
       title: "Tom Yum",
-      desc: "Hot and sour Thai soup with bold citrus and herbal notes.",
+      desc:
+        lang === "en"
+          ? "Hot and sour Thai soup with bold citrus and herbal notes."
+          : lang === "es"
+          ? "Sopa tailandesa picante y ácida con intensas notas cítricas y herbales."
+          : "Sopa tailandesa picant i àcida amb notes cítriques i herbals intenses.",
       price: "€8.90",
       image: "/omyum.png",
     },
     {
       title: "Mango Sticky Rice",
-      desc: "Sweet mango served with soft sticky rice and coconut.",
+      desc:
+        lang === "en"
+          ? "Sweet mango served with soft sticky rice and coconut."
+          : lang === "es"
+          ? "Mango dulce servido con arroz pegajoso suave y coco."
+          : "Mango dolç servit amb arròs glutinós suau i coco.",
       price: "€6.90",
       image: "/stickyricemango.PNG",
     },
     {
       title: "Thai Iced Tea",
-      desc: "Refreshing creamy tea with a smooth sweet finish.",
+      desc:
+        lang === "en"
+          ? "Refreshing creamy tea with a smooth sweet finish."
+          : lang === "es"
+          ? "Té cremoso y refrescante con un final dulce y suave."
+          : "Te cremós i refrescant amb un final dolç i suau.",
       price: "€4.50",
       image: "/ThaiIcedTea.PNG",
     },
@@ -72,15 +309,15 @@ export default function Home() {
 
   const pdfCards = [
     {
-      title: "Full Food Menu",
-      desc: "Open the complete food menu in PDF format.",
-      button: "Open Food PDF",
+      title: t.pdf.foodTitle,
+      desc: t.pdf.foodDesc,
+      button: t.pdf.foodBtn,
       link: "/food-menu.pdf",
     },
     {
-      title: "Drinks Menu",
-      desc: "Open the full drinks menu in PDF format.",
-      button: "Open Drinks PDF",
+      title: t.pdf.drinksTitle,
+      desc: t.pdf.drinksDesc,
+      button: t.pdf.drinksBtn,
       link: "/drinkmenu.pdf",
       image: "/drinknahled.png",
     },
@@ -99,38 +336,55 @@ export default function Home() {
         </div>
 
         <nav className="nav">
-          <a href="#home">Home</a>
-          <a href="#locations">Locations</a>
-          <a href="#menu">Menu</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#contact">Contact</a>
+          <a href="#home">{t.nav.home}</a>
+          <a href="#locations">{t.nav.locations}</a>
+          <a href="#menu">{t.nav.menu}</a>
+          <a href="#gallery">{t.nav.gallery}</a>
+          <a href="#contact">{t.nav.contact}</a>
         </nav>
+
+        <div className="langSwitch">
+          <button
+            onClick={() => setLang("en")}
+            className={lang === "en" ? "langBtn active" : "langBtn"}
+          >
+            EN
+          </button>
+          <button
+            onClick={() => setLang("es")}
+            className={lang === "es" ? "langBtn active" : "langBtn"}
+          >
+            ES
+          </button>
+          <button
+            onClick={() => setLang("ca")}
+            className={lang === "ca" ? "langBtn active" : "langBtn"}
+          >
+            CA
+          </button>
+        </div>
       </header>
 
       <section id="home" className="hero container">
         <div className="heroText">
-          <div className="badge">Thai & Spanish Fusion • Barcelona</div>
+          <div className="badge">{t.hero.badge}</div>
 
           <h1>
-            Fresh food.
+            {t.hero.title1}
             <br />
-            Simple style.
+            {t.hero.title2}
             <br />
-            Two locations.
+            {t.hero.title3}
           </h1>
 
-          <p>
-            Discover Iberico Thai in Barcelona with one shared menu, two
-            convenient locations, and a modern casual dining experience inspired
-            by Thai flavors and a vibrant city atmosphere.
-          </p>
+          <p>{t.hero.text}</p>
 
           <div className="heroButtons">
             <a href="#menu" className="primaryBtn">
-              View Menu
+              {t.hero.menuBtn}
             </a>
             <a href="#locations" className="secondaryBtn">
-              Choose Location
+              {t.hero.locationBtn}
             </a>
           </div>
         </div>
@@ -146,12 +400,9 @@ export default function Home() {
 
       <section id="locations" className="section container">
         <div className="sectionIntro">
-          <span className="sectionLabel">Our Locations</span>
-          <h2>Two places, one menu, same taste</h2>
-          <p>
-            Visit the branch that suits you best. Both locations offer the same
-            menu, fast service, and the Iberico Thai experience.
-          </p>
+          <span className="sectionLabel">{t.locations.label}</span>
+          <h2>{t.locations.title}</h2>
+          <p>{t.locations.text}</p>
         </div>
 
         <div className="locationGrid">
@@ -167,13 +418,13 @@ export default function Home() {
 
               <div className="locationInfo">
                 <p>
-                  <strong>Address:</strong> {loc.address}
+                  <strong>{t.locations.address}:</strong> {loc.address}
                 </p>
                 <p>
-                  <strong>Phone:</strong> {loc.phone}
+                  <strong>{t.locations.phone}:</strong> {loc.phone}
                 </p>
                 <p>
-                  <strong>Hours:</strong> {loc.hours}
+                  <strong>{t.locations.hours}:</strong> {loc.hours}
                 </p>
               </div>
 
@@ -182,7 +433,7 @@ export default function Home() {
                   href={`tel:${loc.phone.replace(/\s/g, "")}`}
                   className="primarySmallBtn"
                 >
-                  Call
+                  {t.locations.call}
                 </a>
                 <a
                   href={loc.map}
@@ -190,7 +441,7 @@ export default function Home() {
                   rel="noreferrer"
                   className="secondarySmallBtn"
                 >
-                  Route
+                  {t.locations.route}
                 </a>
               </div>
             </div>
@@ -201,12 +452,9 @@ export default function Home() {
       <section id="menu" className="sectionAlt">
         <div className="container">
           <div className="sectionIntro center">
-            <span className="sectionLabel">Menu Preview</span>
-            <h2>Popular dishes everyone loves</h2>
-            <p>
-              A simple preview of your shared menu. You can also open the full
-              food and drinks menu as PDF below.
-            </p>
+            <span className="sectionLabel">{t.menu.label}</span>
+            <h2>{t.menu.title}</h2>
+            <p>{t.menu.text}</p>
           </div>
 
           <div className="menuGrid">
@@ -254,32 +502,24 @@ export default function Home() {
       <section className="section container">
         <div className="featureBox">
           <div>
-            <span className="sectionLabel">Why Choose Us</span>
-            <h2>Fresh, fast, and easy to enjoy</h2>
+            <span className="sectionLabel">{t.feature.label}</span>
+            <h2>{t.feature.title}</h2>
           </div>
 
           <div className="featureRight">
             <div className="featureItem">
-              <h4>Fresh ingredients</h4>
-              <p>
-                Balanced flavors, colorful presentation, and simple food people
-                want to come back for.
-              </p>
+              <h4>{t.feature.item1Title}</h4>
+              <p>{t.feature.item1Text}</p>
             </div>
 
             <div className="featureItem">
-              <h4>Two convenient spots</h4>
-              <p>
-                Great for tourists, locals, and anyone exploring Barcelona.
-              </p>
+              <h4>{t.feature.item2Title}</h4>
+              <p>{t.feature.item2Text}</p>
             </div>
 
             <div className="featureItem">
-              <h4>Shared menu</h4>
-              <p>
-                No confusion. Same dishes, same quality, whichever location you
-                choose.
-              </p>
+              <h4>{t.feature.item3Title}</h4>
+              <p>{t.feature.item3Text}</p>
             </div>
           </div>
         </div>
@@ -288,9 +528,9 @@ export default function Home() {
       <section id="gallery" className="sectionAlt">
         <div className="container">
           <div className="sectionIntro center">
-            <span className="sectionLabel">Gallery</span>
-            <h2>Food and atmosphere</h2>
-            <p>A simple gallery preview with your real dish images.</p>
+            <span className="sectionLabel">{t.gallery.label}</span>
+            <h2>{t.gallery.title}</h2>
+            <p>{t.gallery.text}</p>
           </div>
 
           <div className="galleryGrid">
@@ -310,12 +550,9 @@ export default function Home() {
       <section id="contact" className="section container">
         <div className="contactBox">
           <div>
-            <span className="sectionLabel">Contact</span>
-            <h2>Come visit Iberico Thai</h2>
-            <p>
-              Two locations in Barcelona, one simple experience. Check the menu,
-              choose your nearest branch, and enjoy the food.
-            </p>
+            <span className="sectionLabel">{t.contact.label}</span>
+            <h2>{t.contact.title}</h2>
+            <p>{t.contact.text}</p>
           </div>
 
           <div className="contactRight">
@@ -332,7 +569,7 @@ export default function Home() {
       </section>
 
       <footer className="footer">
-        <p>© 2026 Iberico Thai. All rights reserved.</p>
+        <p>{t.footer}</p>
       </footer>
 
       <style jsx>{`
@@ -362,6 +599,8 @@ export default function Home() {
           background: rgba(248, 246, 242, 0.92);
           backdrop-filter: blur(12px);
           border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+          gap: 20px;
+          flex-wrap: wrap;
         }
 
         .brandWrap {
@@ -397,6 +636,34 @@ export default function Home() {
           color: #222;
           font-size: 15px;
           font-weight: 500;
+        }
+
+        .langSwitch {
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          background: white;
+          padding: 6px;
+          border-radius: 999px;
+          border: 1px solid rgba(0, 0, 0, 0.08);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .langBtn {
+          border: none;
+          background: transparent;
+          padding: 8px 14px;
+          border-radius: 999px;
+          font-size: 13px;
+          font-weight: 700;
+          cursor: pointer;
+          color: #444;
+          transition: 0.2s ease;
+        }
+
+        .langBtn.active {
+          background: #d98d3f;
+          color: white;
         }
 
         .hero {
@@ -497,7 +764,8 @@ export default function Home() {
         .primaryBtn:hover,
         .primarySmallBtn:hover,
         .secondaryBtn:hover,
-        .secondarySmallBtn:hover {
+        .secondarySmallBtn:hover,
+        .langBtn:hover {
           transform: translateY(-1px);
         }
 
@@ -891,6 +1159,11 @@ export default function Home() {
 
           .galleryGrid {
             grid-template-columns: 1fr;
+          }
+
+          .langSwitch {
+            width: 100%;
+            justify-content: center;
           }
         }
       `}</style>

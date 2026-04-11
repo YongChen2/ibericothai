@@ -298,7 +298,7 @@ export default function Home() {
     {
       title: "Fried Rice",
       desc: t.dishes.friedRice,
-      price: "€10.90",
+      price: "€7.50",
       image: "/FriedRice.png",
     },
     {
